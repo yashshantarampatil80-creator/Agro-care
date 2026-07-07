@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer Guidance App</title>
+  <link rel="stylesheet" href="agro.css">
+
+
+</head>
+
+<body><!-- Unique AgroCare Header -->
+<header class="agrocare-header">
+  <div class="header-top">
+    <div class="logo">
+      <img src="logo.png" alt="AgroCare Logo">
+      <h1>AgroCare</h1>
+    </div>
+    <div class="tagline">
+      <p>🌱 Growing Smarter, Farming Better 🌱</p>
+    </div>
+  </div>
+  <nav class="nav-bar">
+    <ul>
+     <li><a href="Home.html">Home</a></li>
+          <li><a href="AgroCare.html">Guidance</a></li>
+          <li><a href="shoping.html">Shop</a></li>
+          <li><a href="About Us.html">About Us</a></li>
+          <li><a href="contact1.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <main>
+    <!-- option bar -->
+
+    <title>Top Categories</title>      
+    <link rel="stylesheet" href="a.css"> <!-- external CSS file -->
+
+
+    <body><style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: url("bagrount.jpg") no-repeat center center fixed; /* replace with your image */
+        background-size: cover;
+        color: #2f3e46;
+    }
+</style>
+
+      <h2>Top Categories</h2>
+      <div class="scroll-container">
+        <div class="categories">
+
+
+          <div class="category shopping">
+            <img src="imag/shopping.png" alt="Shopping Icon">
+            <a href="shoping.html" class="box cotton">
+              <h3>Shopping
+            </a>
+          </div>
+
+          <div class="category Tomato">
+            <img src="imag/58-tomato-png-image.png" alt="Tomato Icon">
+            <a href="Types of cropes/Tomato.html" class="box cotton">
+              <h3>Tomato
+            </a>
+          </div>
+
+          <div class="category sugarcane ">
+            <img src="imag/sugarcane-transparent-free-png.webp" alt="sugarcane  Icon">
+            <a href="Types of cropes/sugarcane.html" class="box cotton">
+              <h3>sugarcane
+            </a>
+          </div>
+
+          <div class="category Cotton">
+            <img src="imag/cotton.png" alt="Cotton Plant Icon">
+            <a href="Types of cropes/cotton.html" class="box cotton">
+              <h3>Cotton
+            </a>
+          </div>
+
+          <div class="category Mango ">
+            <img src="imag/mango-tree.webp" alt="Mango  Plant Icon">
+            <a href="Types of cropes/Mango.html" class="box cotton">
+              <h3>Mango
+            </a>
+          </div>
+
+          <div class="category Grapes ">
+            <img src="imag/grapes.webp" alt="Grapes  Plant Icon">
+            <a href="Types of cropes/Grapes.html" class="box cotton">
+              <h3>Grapes
+            </a>
+          </div>
+
+          <div class="category Apple ">
+            <img src="imag/Apple.png" alt="Apple  Plant Icon">
+            <a href="Types of cropes/Apple.html" class="box cotton">
+              <h3>Apple
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </body>
+    <!--to opan next page-->
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Shopping Cart</title>
+      <link rel="stylesheet" href="shop1.css">
+    </head>
+    <!-- Crop Guidance Section -->
+    <!-- <h2>Select Your Crop</h2>
+    <select id="cropSelect">
+      <option value="">--Choose a crop--</option>
+      <option value="wheat">Wheat</option>
+      <option value="rice">Rice</option>
+      <option value="cotton">Cotton</option>
+      <option value="sugarcane">Sugarcane</option>
+    </select>
+    <button onclick="showGuidance()">Get Guidance</button>
+    <p id="guidanceText"></p>
+    </section> -->
+
+
+    <!-- Product Store Section -->
+    <section class="store">
+      <h2>Available tools</h2>
+<!-- Product Tools Section -->
+<section class="tools-section">
+  <h2>🌿 Farming Tools & Equipment</h2>
+  <div class="tools-grid">
+    
+    <!-- Tool 1 -->
+    <div class="tool-card">
+      <img src="shoping/seeds/cotan seeds goldi-333.png" alt="Crop Sprayer">
+      <h3>Crop Sprayer</h3>
+      <p class="price">₹2,500</p>
+      <button onclick="addToCart('Crop Sprayer', 2500)">Add to Cart</button>
+    </div>
+
+    <!-- Tool 2 -->
+    <div class="tool-card">
+      <img src="KUBOTA.jpg" alt="Mini Tractor">
+      <h3>Mini Tractor</h3>
+      <p class="price">₹75,000</p>
+      <button onclick="addToCart('Mini Tractor', 75000)">Add to Cart</button>
+    </div>
+
+    <!-- Tool 3 -->
+    <div class="tool-card">
+      <img src="shoping/pesticide/Hamla.webp" alt="Organic Fertilizer">
+      <h3>Organic Fertilizer</h3>
+      <p class="price">₹800</p>
+      <button onclick="addToCart('Organic Fertilizer', 800)">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- Cart Notification -->
+<div id="cart-notification"></div>
+
+     
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About Agro Care</h3>
+        <p>Guiding farmers with knowledge and connecting them to products for a better tomorrow.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="AgroCare.html">Guidance</a></li>
+          <li><a href="shopping.html">Shop</a></li>
+          <li><a href="shopping.html">About Us</a></li>
+          <li><a href="contact1.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#">🌐</a>
+          <a href="#">🐦</a>
+          <a href="#">📘</a>
+          <a href="#">📸</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Agro Care. All rights reserved.
+    </div>
+  </footer>
+  
+<script src="care.js"></script>
+</body>
+
+  
+   </body> 
+</body>
+
+</html>

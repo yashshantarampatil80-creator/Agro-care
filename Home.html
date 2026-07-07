@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgroCare - Home</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #a8edea, #fed6e3); /* teal-mint with soft pink */
+        color: #333;
+    }
+
+    /* Header */
+    header {
+        background: #00695c;
+        color: white;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 1.8rem;
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+    }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+        text-align: center;
+        padding: 80px 20px;
+        color: #004d40;
+    }
+    .hero h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+    .hero button {
+        background: #004d40;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        font-size: 1rem;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    .hero button:hover {
+        background: #00796b;
+    }
+
+    /* Featured Products */
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 40px 20px;
+    }
+    .product-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        width: 250px;
+        text-align: center;
+        padding: 20px;
+        transition: transform 0.3s ease;
+    }
+    .product-card:hover {
+        transform: translateY(-5px);
+    }
+    .product-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    .product-card h3 {
+        margin: 15px 0 10px;
+    }
+    .product-card button {
+        background: #00695c;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    .product-card button:hover {
+        background: #00796b;
+    }
+
+    /* Footer */
+    footer {
+        background: #004d40;
+        color: white;
+        padding: 30px 20px;
+        text-align: center;
+    }
+    footer p {
+        margin: 5px 0;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>AgroCare</h1>
+    <nav>
+        <ul>
+            <li><a href="Home.html"class="active">Home</a></li>
+            <li><a href="AgroCare.html">Guidance</a></li>
+            <li><a href="shoping.html">Shop</a></li>
+            <li><a href="About Us.html">About Us</a></li>
+            <li><a href="contact1.html">Contact</a></li>
+            <li><a href="login .html">logine</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Welcome to AgroCare</h2>
+    <p>🌱 Fresh solutions for your farm and garden. Discover products that make growing easier and smarter.</p>
+    <button onclick="window.location.href='shoping.html'">Shop Now</button>
+</section>
+
+<section class="products">
+    <div class="product-card">
+        <img src="organic.jpg" alt="Organic Fertilizer">
+        <h3>Organic Fertilizer</h3>
+        <p>₹4,000</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+        <img src="prime soysben.jpg" alt="Premium Seeds">
+        <h3>Premium Seeds</h3>
+        <p>₹2,500</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+        <img src="TRACTER.jpg" alt="Tractor">
+        <h3>Tractor</h3>
+        <p>₹22,00,000</p>
+        <button>Add to Cart</button>
+    </div>
+</section>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>AgroCare</h3>
+      <p>🌱 Growing with you, delivering quality products for your farm and garden.</p>
+    </div>
+
+    
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>Email: support@agrocare.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <p>Address: Karad, Maharashtra, India</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#">🌐 Facebook</a><br>
+        <a href="#">📸 Instagram</a><br>
+        <a href="#">🐦 Twitter</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 AgroCare | All Rights Reserved</p>
+  </div>
+</footer>
+
+<style>
+footer {
+  background: #00695c;
+  color: white;
+  padding: 30px 20px;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+.footer-section {
+  flex: 1 1 250px;
+  margin: 15px;
+}
+.footer-section h3 {
+  margin-bottom: 10px;
+  border-bottom: 2px solid #00695c;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-section ul li {
+  margin: 6px 0;
+}
+.footer-section ul li a {
+  color: #f1f8e9;
+  text-decoration: none;
+}
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+.social-icons a {
+  color: #f1f8e9;
+  text-decoration: none;
+}
+.social-icons a:hover {
+  text-decoration: underline;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #00695c;
+  padding-top: 10px;
+}
+</style>
+
+</body>
+</html>
