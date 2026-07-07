@@ -1,0 +1,57 @@
+
+body {
+  
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 20px;
+}
+
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.categories {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.category {
+  flex: 1 1 10px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.category img {
+  width: 50px;
+  margin-bottom: 40px;
+}
+
+.category:hover {
+  transform: scale(1.05);
+}
+
+/* Different background colors */
+.shopping { background-color: #cce7ff; }
+.Tomato { background-color: #e0e0e0; }
+.sugarcane { background-color: #99ccff; }
+.Cotton { background-color: #ccffcc; }
+.Mango { background-color:#AEB1FA; }
+.Grapes { background-color:#83f0ea; }
+.Apple { background-color:#f696e1; }
+
+
+.categories {
+  background-image: url('cotton.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 90px;
+}
+
+
+
+

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgroCare Shop</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+    }
+    .header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: 15px;
+}
+
+.logo h1 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.tagline p {
+  color: #f1f8e9;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.nav-bar {
+  background: rgba(255,255,255,0.1);
+  padding: 10px 0;
+}
+
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+  color: #ffeb3b;
+  text-shadow: 0 0 5px #fff;
+}
+
+
+header{
+  background: #2e7d32;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+    }
+    .product {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin: 15px;
+        padding: 15px;
+        width: 220px;
+        text-align: center;
+        transition: transform 0.2s;
+    }
+    .product:hover {
+        transform: scale(1.05);
+    }
+    .product img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+    .product h2 {
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+    .product .price {
+        color: #388e3c;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .product button {
+        background: #388e3c;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .cart {
+        background: #f9fbe7;
+        padding: 20px;
+    }
+    .cart h2 {
+        margin-top: 0;
+    }
+    .cart-item {
+        display: flex;
+        justify-content: space-between;
+        margin: 8px 0;
+    }
+    .purchase-btn {
+        background: #2e7d32;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+    /* Notification popup */
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #4caf50;
+        color: white;
+        padding: 15px;
+        border-radius: 6px;
+        display: none;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    
+    .cart {
+        background: #f9fbe7;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        max-width: 800px;   /* wider cart */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        font-size: 1.1rem;  /* bigger text */
+    }
+    .cart-item button {
+        background: #d32f2f;
+        color: white;
+        border: none;
+        padding: 6px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    #totalPrice {
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+
+
+</style>
+</head>
+<body>
+</head>
+
+<body><!-- Unique AgroCare Header -->
+<header class="agrocare-header">
+  <div class="header-top">
+    <div class="logo">
+      <img src="logo.png" alt="AgroCare Logo">
+      <h1>AgroCare</h1>
+    </div>
+    <div class="tagline">
+      <p>🌱 Growing Smarter, Farming Better 🌱</p>
+    </div>
+  </div>
+  <nav class="nav-bar">
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="AgroCare.html"> Guidance</a></li>
+      <li><a href="shoping.html">Shop</a></li>
+      <li><a href="About Us.html">About Us</a></li>
+      <li><a href="contact1.html">Contact</a></li>
+    </ul>
+  </nav>
+  
+</header>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: url("bagrount.jpg") no-repeat center center fixed; /* replace with your image */
+        background-size: cover;
+        color: #2f3e46;
+    }
+</style>
+
+
+<div class="products">
+    <div class="product">
+        <img src="maka.jpg" alt="Canebooster">
+        <h2>Mas seeds</h2>
+        <div class="price">₹4,500</div>
+        <button onclick="addToCart('Mas seeds', 4500)">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="bio fram.jpg" alt="Fertilizer">
+        <h2>Organic Fertilizer</h2>
+        <div class="price">₹3,5000</div>
+        <button onclick="addToCart('Organic Fertilizer', 3500)">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="greenworks.webp" alt="Seeds">
+        <h2>Tools</h2>
+        <div class="price">₹6,500</div>
+        <button onclick="addToCart('Tools', 6500)">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="Harvaster.jpg"Seeds>
+        <h2>Harvester</h2>
+        <div class="price">₹20,00,000</div>
+        <button onclick="addToCart('Harvester', 200000)">Add to Cart</button>
+    </div>
+
+
+    <div class="product">
+        <img src="organic.jpg" alt="Seeds">
+        <h2>Organic fertilizers</h2>
+        <div class="price">₹2900</div>
+        <button onclick="addToCart('Organic fertilizers', 2900)">Add to Cart</button>
+    </div>
+</div>
+
+<div class="cart">
+    <h2>🛒 Your Cart</h2>
+    <div id="cartItems"></div>
+    <div id="totalPrice">Total: ₹0</div>
+    
+    <button class="purchase-btn" onclick="goToPayment()">Purchase</button>
+
+<script>
+function goToPayment() {
+    if(cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+    }
+    // Save cart data in localStorage
+    localStorage.setItem("cart", JSON.stringify(cart));
+    // Redirect to payment page
+    window.location.href = "pay.html";
+}
+</script>
+
+</div>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>AgroCare</h3>
+      <p>🌱 Growing with you, delivering quality products for your farm and garden.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact1.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>Email: support@agrocare.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <p>Address: Karad, Maharashtra, India</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#">🌐 Facebook</a><br>
+        <a href="#">📸 Instagram</a><br>
+        <a href="#">🐦 Twitter</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 AgroCare | All Rights Reserved</p>
+  </div>
+</footer>
+
+<style>
+footer {
+  background: #2e7d32;
+  color: white;
+  padding: 30px 20px;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+.footer-section {
+  flex: 1 1 250px;
+  margin: 15px;
+}
+.footer-section h3 {
+  margin-bottom: 10px;
+  border-bottom: 2px solid #81c784;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-section ul li {
+  margin: 6px 0;
+}
+.footer-section ul li a {
+  color: #f1f8e9;
+  text-decoration: none;
+}
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+.social-icons a {
+  color: #f1f8e9;
+  text-decoration: none;
+}
+.social-icons a:hover {
+  text-decoration: underline;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #81c784;
+  padding-top: 10px;
+}
+</style>
+
+<div class="notification" id="notification"></div>
+
+<script>
+let cart = [];
+
+function addToCart(name, price) {
+    cart.push({name, price});
+    displayCart();
+}
+
+function displayCart() {
+    const cartItems = document.getElementById("cartItems");
+    cartItems.innerHTML = "";
+    let total = 0;
+
+    cart.forEach((item, index) => {
+        total += item.price;
+        cartItems.innerHTML += `
+            <div class="cart-item">
+                <span>${item.name}</span>
+                <span>₹${item.price}</span>
+                <button onclick="removeItem(${index})">Remove</button>
+            </div>
+        `;
+    });
+
+    document.getElementById("totalPrice").textContent = "Total: ₹" + total;
+}
+
+function removeItem(index) {
+    cart.splice(index, 1);
+    displayCart();
+}
+
+function purchase() {
+    if(cart.length === 0) {
+        showNotification("Your cart is empty!");
+    } else {
+        let products = cart.map(item => item.name).join(", ");
+        showNotification("🎉 Purchase successful! You bought: " + products);
+        cart = [];
+        displayCart();
+    }
+}
+
+function showNotification(message) {
+    const notification = document.getElementById("notification");
+    notification.textContent = message;
+    notification.style.display = "block";
+    setTimeout(() => {
+        notification.style.display = "none";
+    }, 3000);
+}
+</script>
+
+</body>
+</html>

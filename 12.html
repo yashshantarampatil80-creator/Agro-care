@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AgroCare</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; }
+    header { background:#2e7d32; color:white; padding:15px; text-align:center; }
+    nav { background:#388e3c; padding:10px; }
+    nav a { color:white; margin:0 10px; text-decoration:none; }
+    .products { display:flex; flex-wrap:wrap; gap:20px; padding:20px; }
+    .product { border:1px solid #ccc; padding:10px; width:200px; text-align:center; }
+    .product button { background:#2e7d32; color:white; border:none; padding:5px 10px; cursor:pointer; }
+    #cart { padding:20px; background:#f1f1f1; }
+    #cart ul { list-style:none; padding:0; }
+    #cart ul li { margin:5px 0; }
+    #checkout { background:#388e3c; color:white; border:none; padding:10px; cursor:pointer; }
+
+    /* Notification */
+    #notification {
+      display:none;
+      background:#4caf50;
+      color:white;
+      padding:10px;
+      margin:10px auto;
+      text-align:center;
+      border-radius:5px;
+      width:60%;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🌱 AgroCare</h1>
+</header>
+
+<nav>
+  <a href="#">Shopping</a>
+  <a href="#">Tomato</a>
+  <a href="#">Sugarcane</a>
+  <a href="#">Cotton</a>
+  <a href="#">Mango</a>
+  <a href="#">Grapes</a>
+  <a href="#">Apple</a>
+</nav>
+
+<!-- Notification -->
+<div id="notification"></div>
+
+<main>
+  <section class="products">
+    <div class="product">
+      <h3>Tomato Seeds</h3>
+      <p>₹100</p>
+      <button onclick="addToCart('Tomato Seeds', 100)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <h3>Sugarcane Bundle</h3>
+      <p>₹250</p>
+      <button onclick="addToCart('Sugarcane Bundle', 250)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <h3>Mango Sapling</h3>
+      <p>₹500</p>
+      <button onclick="addToCart('Mango Sapling', 500)">Add to Cart</button>
+    </div>
+  </section>
+
+  <section id="cart">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <p id="total">Total: ₹0</p>
+    <button id="checkout" onclick="checkout()">Place Order</button>
+  </section>
+</main>
+
+<footer>
+  <p>AgroCare © 2026 | Helping Farmers Grow 🌾</p>
+</footer>
+
+<script>
+  let cart = [];
+
+  function showNotification(message) {
+    const note = document.getElementById('notification');
+    note.textContent = message;
+    note.style.display = 'block';
+    setTimeout(() => { note.style.display = 'none'; }, 2000);
+  }
+
+  function addToCart(product, price) {
+    cart.push({product, price});
+    displayCart();
+    showNotification(`${product} added to cart!`);
+  }
+
+  function displayCart() {
+    const cartItems = document.getElementById('cartItems');
+    cartItems.innerHTML = '';
+    let total = 0;
+    cart.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = `${item.product} - ₹${item.price}`;
+      cartItems.appendChild(li);
+      total += item.price;
+    });
+    document.getElementById('total').textContent = `Total: ₹${total}`;
+  }
+
+  function checkout() {
+    if(cart.length === 0) {
+      showNotification("Your cart is empty!");
+    } else {
+      showNotification("✅ Order placed successfully!");
+      cart = [];
+      displayCart();
+    }
+  }
+</script>
+
+</body>
+</html>
