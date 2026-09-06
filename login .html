@@ -23,7 +23,27 @@
         box-shadow: 0 6px 12px rgba(0,0,0,0.2);
         width: 350px;
         text-align: center;
-    }
+    }/* Logo container at top */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;   /* Center horizontally */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logo-img {
+    width: 100px;   /* Adjust size */
+    height: auto;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.logo-container h1 {
+    font-size: 28px;
+    color: #2f3e46; /* Dark green text */
+    margin: 0;
+}
+
 
     .login-box h2 {
         margin-bottom: 20px;
@@ -73,7 +93,7 @@
     body {
         margin: 0;
         font-family: 'Segoe UI', sans-serif;
-        background: url("bagrount\ login.jpg") no-repeat center center fixed; /* replace with your image */
+        background: url("imag/tractor-working-rice-fields-barley-farm-sunset-time-modern-agricultural-transport_73899-14837.avif") no-repeat center center fixed; /* replace with your image */
         background-size: cover;
         color: #2f3e46;
     }
@@ -81,7 +101,11 @@
 
 
 <div class="login-box">
-    <h2>Login to AgroCare</h2>
+   <!-- Logo Section -->
+  <div class="logo-container">
+    <img src="imag/15cc87c8-6d2d-4dc8-842c-b7450d63330f.png" alt="AgroCare Logo" class="logo-img">
+    <h1>AgroCare</h1>
+  </div>
     <form id="loginForm">
         <input type="text" id="name" placeholder="Your Name" required>
         <input type="email" id="email" placeholder="Email ID" required>
