@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Agro Care</title>
+ <style>
+    /* Search Bar Styles */
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .search-box {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+      width: 200px;
+    }
+    .search-button {
+      padding: 8px 12px;
+      border: 1px solid #0077cc;
+      background-color: #0077cc;
+      color: white;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .search-button:hover {
+      background-color: #005fa3;
+    }
+  </style> 
+</head>
+<body>
+
+  <!-- Search Bar -->
+  <div class="search-container">
+    <input type="text" class="search-box" placeholder="Search...">
+    <button class="search-button" onclick="searchFunction()">Go</button>
+  </div>
+
+  <script>
+    function searchFunction() {
+      let query = document.querySelector('.search-box').value;
+      if(query){
+        alert("You searched for: " + query);
+        // Later you can connect this to your product/crop search logic
+      }
+    }
+  </script>
+
+</body>
+</html>
